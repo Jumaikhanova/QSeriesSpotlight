@@ -1,0 +1,18 @@
+zmac.pbi: C:\Texas\ Instruments\Z-Stack\ 3.0.2\Components\zmac\f8w\zmac.c \
+  C:\Texas\ Instruments\Z-Stack\ 3.0.2\Projects\zstack\HomeAutomation\Raw\CC2530DB\..\..\..\..\..\Components\osal\include\ZComDef.h \
+  C:\Texas\ Instruments\Z-Stack\ 3.0.2\Projects\zstack\HomeAutomation\Raw\CC2530DB\..\..\..\..\..\Components\osal\include/comdef.h \
+  C:\Texas\ Instruments\Z-Stack\ 3.0.2\Projects\zstack\HomeAutomation\Raw\CC2530DB\..\..\..\..\..\Components\hal\target\CC2530EB\hal_types.h \
+  C:\Texas\ Instruments\Z-Stack\ 3.0.2\Projects\zstack\HomeAutomation\Raw\CC2530DB\..\..\..\..\..\Components\hal\include\hal_defs.h \
+  C:\Texas\ Instruments\Z-Stack\ 3.0.2\Projects\zstack\HomeAutomation\Raw\CC2530DB\..\..\..\..\..\Components\services\saddr\saddr.h \
+  C:\Texas\ Instruments\Z-Stack\ 3.0.2\Projects\zstack\HomeAutomation\Raw\CC2530DB\..\..\..\..\..\Components\osal\include\OSAL.h \
+  C:\Program\ Files\ (x86)\IAR\ Systems\Embedded\ Workbench\ 8.3\8051\inc\clib\limits.h \
+  C:\Program\ Files\ (x86)\IAR\ Systems\Embedded\ Workbench\ 8.3\8051\inc\clib/sysmac.h \
+  C:\Texas\ Instruments\Z-Stack\ 3.0.2\Projects\zstack\HomeAutomation\Raw\CC2530DB\..\..\..\..\..\Components\osal\include/OSAL_Memory.h \
+  C:\Texas\ Instruments\Z-Stack\ 3.0.2\Projects\zstack\HomeAutomation\Raw\CC2530DB\..\..\..\..\..\Components\osal\include/OSAL_Timers.h \
+  C:\Texas\ Instruments\Z-Stack\ 3.0.2\Projects\zstack\HomeAutomation\Raw\CC2530DB\..\..\..\..\..\Components\zmac\ZMAC.h \
+  C:\Texas\ Instruments\Z-Stack\ 3.0.2\Components\zmac\f8w\zmac_internal.h \
+  C:\Texas\ Instruments\Z-Stack\ 3.0.2\Projects\zstack\HomeAutomation\Raw\CC2530DB\..\..\..\..\..\Components\mac\include\mac_api.h \
+  C:\Texas\ Instruments\Z-Stack\ 3.0.2\Projects\zstack\HomeAutomation\Raw\CC2530DB\..\..\..\..\..\Components\services\sdata\sdata.h \
+  C:\Texas\ Instruments\Z-Stack\ 3.0.2\Projects\zstack\HomeAutomation\Raw\CC2530DB\..\..\..\..\..\Components\mac\high_level\mac_main.h \
+  C:\Texas\ Instruments\Z-Stack\ 3.0.2\Projects\zstack\HomeAutomation\Raw\CC2530DB\..\..\..\..\..\Components\mac\high_level/mac_high_level.h \
+  C:\Texas\ Instruments\Z-Stack\ 3.0.2\Projects\zstack\HomeAutomation\Raw\CC2530DB\..\..\..\..\..\Components\stack\sys\ZGlobals.h

@@ -1,0 +1,31 @@
+zmac_cb.pbi: \
+  C:\Texas\ Instruments\Z-Stack\ 3.0.2\Components\zmac\f8w\zmac_cb.c \
+  C:\Texas\ Instruments\Z-Stack\ 3.0.2\Projects\zstack\HomeAutomation\Raw\CC2530DB\..\..\..\..\..\Components\osal\include\ZComDef.h \
+  C:\Texas\ Instruments\Z-Stack\ 3.0.2\Projects\zstack\HomeAutomation\Raw\CC2530DB\..\..\..\..\..\Components\osal\include/comdef.h \
+  C:\Texas\ Instruments\Z-Stack\ 3.0.2\Projects\zstack\HomeAutomation\Raw\CC2530DB\..\..\..\..\..\Components\hal\target\CC2530EB\hal_types.h \
+  C:\Texas\ Instruments\Z-Stack\ 3.0.2\Projects\zstack\HomeAutomation\Raw\CC2530DB\..\..\..\..\..\Components\hal\include\hal_defs.h \
+  C:\Texas\ Instruments\Z-Stack\ 3.0.2\Projects\zstack\HomeAutomation\Raw\CC2530DB\..\..\..\..\..\Components\services\saddr\saddr.h \
+  C:\Texas\ Instruments\Z-Stack\ 3.0.2\Projects\zstack\HomeAutomation\Raw\CC2530DB\..\..\..\..\..\Components\osal\include\OSAL.h \
+  C:\Program\ Files\ (x86)\IAR\ Systems\Embedded\ Workbench\ 8.3\8051\inc\clib\limits.h \
+  C:\Program\ Files\ (x86)\IAR\ Systems\Embedded\ Workbench\ 8.3\8051\inc\clib/sysmac.h \
+  C:\Texas\ Instruments\Z-Stack\ 3.0.2\Projects\zstack\HomeAutomation\Raw\CC2530DB\..\..\..\..\..\Components\osal\include/OSAL_Memory.h \
+  C:\Texas\ Instruments\Z-Stack\ 3.0.2\Projects\zstack\HomeAutomation\Raw\CC2530DB\..\..\..\..\..\Components\osal\include/OSAL_Timers.h \
+  C:\Texas\ Instruments\Z-Stack\ 3.0.2\Projects\zstack\HomeAutomation\Raw\CC2530DB\..\..\..\..\..\Components\zmac\ZMAC.h \
+  C:\Texas\ Instruments\Z-Stack\ 3.0.2\Components\zmac\f8w\zmac_internal.h \
+  C:\Texas\ Instruments\Z-Stack\ 3.0.2\Projects\zstack\HomeAutomation\Raw\CC2530DB\..\..\..\..\..\Components\mac\include\mac_api.h \
+  C:\Texas\ Instruments\Z-Stack\ 3.0.2\Projects\zstack\HomeAutomation\Raw\CC2530DB\..\..\..\..\..\Components\services\sdata\sdata.h \
+  C:\Texas\ Instruments\Z-Stack\ 3.0.2\Projects\zstack\HomeAutomation\Raw\CC2530DB\..\..\..\..\..\Components\mt\MT_MAC.h \
+  C:\Texas\ Instruments\Z-Stack\ 3.0.2\Projects\zstack\HomeAutomation\Raw\CC2530DB\..\..\..\..\..\Components\hal\target\CC2530EB\hal_mcu.h \
+  C:\Texas\ Instruments\Z-Stack\ 3.0.2\Projects\zstack\HomeAutomation\Raw\CC2530DB\..\..\..\..\..\Components\hal\target\CC2530EB/hal_types.h \
+  C:\Program\ Files\ (x86)\IAR\ Systems\Embedded\ Workbench\ 8.3\8051\inc\ioCC2530.h \
+  C:\Texas\ Instruments\Z-Stack\ 3.0.2\Projects\zstack\HomeAutomation\Raw\CC2530DB\..\..\..\..\..\Components\stack\gp\cGP_stub.h \
+  C:\Texas\ Instruments\Z-Stack\ 3.0.2\Projects\zstack\HomeAutomation\Raw\CC2530DB\..\..\..\..\..\Components\stack\sec\ssp.h \
+  C:\Texas\ Instruments\Z-Stack\ 3.0.2\Projects\zstack\HomeAutomation\Raw\CC2530DB\..\..\..\..\..\Components\stack\nwk\nwk.h \
+  C:\Texas\ Instruments\Z-Stack\ 3.0.2\Projects\zstack\HomeAutomation\Raw\CC2530DB\..\..\..\..\..\Components\stack\nwk/nwk_bufs.h \
+  C:\Texas\ Instruments\Z-Stack\ 3.0.2\Projects\zstack\HomeAutomation\Raw\CC2530DB\..\..\..\..\..\Components\stack\nwk/NLMEDE.h \
+  C:\Texas\ Instruments\Z-Stack\ 3.0.2\Projects\zstack\HomeAutomation\Raw\CC2530DB\..\..\..\..\..\Components\stack\nwk/AssocList.h \
+  C:\Texas\ Instruments\Z-Stack\ 3.0.2\Projects\zstack\HomeAutomation\Raw\CC2530DB\..\..\..\..\..\Components\stack\nwk\nwk_bufs.h \
+  C:\Texas\ Instruments\Z-Stack\ 3.0.2\Projects\zstack\HomeAutomation\Raw\CC2530DB\..\..\..\..\..\Components\stack\sys\ZGlobals.h \
+  C:\Texas\ Instruments\Z-Stack\ 3.0.2\Projects\zstack\HomeAutomation\Raw\CC2530DB\..\..\..\..\..\Components\mac\high_level\mac_security.h \
+  C:\Texas\ Instruments\Z-Stack\ 3.0.2\Projects\zstack\HomeAutomation\Raw\CC2530DB\..\..\..\..\..\Components\mac\high_level/mac_high_level.h \
+  C:\Texas\ Instruments\Z-Stack\ 3.0.2\Projects\zstack\HomeAutomation\Raw\CC2530DB\..\..\..\..\..\Components\mac\high_level\mac_main.h

@@ -1,0 +1,801 @@
+###############################################################################
+#
+# IAR C/C++ Compiler V10.40.1.7397 for 8051               17/Aug/2022  17:02:57
+# Copyright 2004-2021 IAR Systems AB.
+# Evaluation license - IAR Embedded Workbench for 8051, Evaluation edition 10.40
+#
+#    Core               =  plain
+#    Code model         =  banked
+#    Data model         =  large
+#    Calling convention =  xdata reentrant
+#    Constant location  =  data_rom
+#    Dptr setup         =  1,16
+#                          
+#    Source file        =  
+#        C:\Texas Instruments\Z-Stack
+#        3.0.2\Projects\zstack\HomeAutomation\Working
+#        v1.2\Source\zcl_orvibo_data.c
+#    Command line       =  
+#        -f C:\Users\LENOVO~1\AppData\Local\Temp\EW1D97.tmp ("C:\Texas
+#        Instruments\Z-Stack 3.0.2\Projects\zstack\HomeAutomation\Working
+#        v1.2\Source\zcl_orvibo_data.c" -D SECURE=1 -D TC_LINKKEY_JOIN -D
+#        NV_INIT -D NV_RESTORE -D xZTOOL_P1 -D xMT_TASK -D xMT_APP_FUNC -D
+#        xMT_SYS_FUNC -D xMT_ZDO_FUNC -D xMT_ZDO_MGMT -D xMT_APP_CNF_FUNC -D
+#        LEGACY_LCD_DEBUG -D LCD_SUPPORTED=DEBUG -D MULTICAST_ENABLED=FALSE -D
+#        ZCL_READ -D ZCL_WRITE -D ZCL_BASIC -D ZCL_IDENTIFY -D ZCL_SCENES -D
+#        ZCL_GROUPS -D ZCL_ON_OFF -D ZCL_REPORTING_DEVICE -lC "C:\Texas
+#        Instruments\Z-Stack 3.0.2\Projects\zstack\HomeAutomation\Working
+#        v1.2\CC2530DB\RouterEB\List" -lA "C:\Texas Instruments\Z-Stack
+#        3.0.2\Projects\zstack\HomeAutomation\Working
+#        v1.2\CC2530DB\RouterEB\List" --diag_suppress Pe001,Pa010 -o "C:\Texas
+#        Instruments\Z-Stack 3.0.2\Projects\zstack\HomeAutomation\Working
+#        v1.2\CC2530DB\RouterEB\Obj" -e --debug --core=plain --dptr=16,1
+#        --data_model=large --code_model=banked
+#        --calling_convention=xdata_reentrant --place_constants=data_rom
+#        --nr_virtual_regs 16 -f "C:\Texas Instruments\Z-Stack
+#        3.0.2\Projects\zstack\HomeAutomation\Working
+#        v1.2\CC2530DB\..\..\..\Tools\CC2530DB\f8wRouter.cfg" (-DCPU32MHZ
+#        -DROOT=__near_func -DMAC_CFG_APP_PENDING_QUEUE=TRUE
+#        -DMAC_CFG_TX_DATA_MAX=5 -DMAC_CFG_TX_MAX=8 -DMAC_CFG_RX_MAX=5
+#        -DRTR_NWK) -f "C:\Texas Instruments\Z-Stack
+#        3.0.2\Projects\zstack\HomeAutomation\Working
+#        v1.2\CC2530DB\..\..\..\Tools\CC2530DB\f8wConfig.cfg" (-DZIGBEEPRO
+#        -DSECURE=1 -DZG_SECURE_DYNAMIC=0 -DREFLECTOR
+#        -DDEFAULT_CHANLIST=0x07FFF800 -DZDAPP_CONFIG_PAN_ID=0xFFFF
+#        -DNWK_START_DELAY=100 -DEXTENDED_JOINING_RANDOM_MASK=0x007F
+#        -DBEACON_REQUEST_DELAY=100 -DBEACON_REQ_DELAY_MASK=0x00FF
+#        -DLINK_STATUS_JITTER_MASK=0x007F -DROUTE_EXPIRY_TIME=30
+#        -DAPSC_ACK_WAIT_DURATION_POLLED=3000 -DNWK_INDIRECT_MSG_TIMEOUT=7
+#        -DMAX_RREQ_ENTRIES=8 -DAPSC_MAX_FRAME_RETRIES=3
+#        -DNWK_MAX_DATA_RETRIES=2 -DMAX_POLL_FAILURE_RETRIES=2 -DMAX_BCAST=9
+#        -DAPS_MAX_GROUPS=16 -DMAX_RTG_ENTRIES=40 -DNWK_MAX_BINDING_ENTRIES=4
+#        -DMAX_BINDING_CLUSTER_IDS=4 -DDEFAULT_KEY={0} -DMAC_MAX_FRAME_SIZE=116
+#        -DZDNWKMGR_MIN_TRANSMISSIONS=20 "-DCONST=const __code"
+#        -DGENERIC=__generic -DRFD_RCVC_ALWAYS_ON=FALSE -DPOLL_RATE=1000
+#        -DQUEUED_POLL_RATE=100 -DRESPONSE_POLL_RATE=100 -DREJOIN_POLL_RATE=440
+#        -DREJOIN_BACKOFF=900000 -DREJOIN_SCAN=900000 -DENABLE_LED4_DISABLE_S1)
+#        -f "C:\Texas Instruments\Z-Stack
+#        3.0.2\Projects\zstack\HomeAutomation\Working
+#        v1.2\CC2530DB\..\..\..\Tools\CC2530DB\f8wZCL.cfg" -I "C:\Texas
+#        Instruments\Z-Stack 3.0.2\Projects\zstack\HomeAutomation\Working
+#        v1.2\CC2530DB\" -I "C:\Texas Instruments\Z-Stack
+#        3.0.2\Projects\zstack\HomeAutomation\Working v1.2\CC2530DB\..\Source\"
+#        -I "C:\Texas Instruments\Z-Stack
+#        3.0.2\Projects\zstack\HomeAutomation\Working
+#        v1.2\CC2530DB\..\..\Source\" -I "C:\Texas Instruments\Z-Stack
+#        3.0.2\Projects\zstack\HomeAutomation\Working
+#        v1.2\CC2530DB\..\..\..\ZMain\TI2530DB\" -I "C:\Texas
+#        Instruments\Z-Stack 3.0.2\Projects\zstack\HomeAutomation\Working
+#        v1.2\CC2530DB\..\..\..\..\..\Components\hal\include\" -I "C:\Texas
+#        Instruments\Z-Stack 3.0.2\Projects\zstack\HomeAutomation\Working
+#        v1.2\CC2530DB\..\..\..\..\..\Components\hal\target\CC2530EB\" -I
+#        "C:\Texas Instruments\Z-Stack
+#        3.0.2\Projects\zstack\HomeAutomation\Working
+#        v1.2\CC2530DB\..\..\..\..\..\Components\mac\include\" -I "C:\Texas
+#        Instruments\Z-Stack 3.0.2\Projects\zstack\HomeAutomation\Working
+#        v1.2\CC2530DB\..\..\..\..\..\Components\mac\high_level\" -I "C:\Texas
+#        Instruments\Z-Stack 3.0.2\Projects\zstack\HomeAutomation\Working
+#        v1.2\CC2530DB\..\..\..\..\..\Components\mac\low_level\srf04\" -I
+#        "C:\Texas Instruments\Z-Stack
+#        3.0.2\Projects\zstack\HomeAutomation\Working
+#        v1.2\CC2530DB\..\..\..\..\..\Components\mac\low_level\srf04\single_chip\"
+#        -I "C:\Texas Instruments\Z-Stack
+#        3.0.2\Projects\zstack\HomeAutomation\Working
+#        v1.2\CC2530DB\..\..\..\..\..\Components\mt\" -I "C:\Texas
+#        Instruments\Z-Stack 3.0.2\Projects\zstack\HomeAutomation\Working
+#        v1.2\CC2530DB\..\..\..\..\..\Components\osal\include\" -I "C:\Texas
+#        Instruments\Z-Stack 3.0.2\Projects\zstack\HomeAutomation\Working
+#        v1.2\CC2530DB\..\..\..\..\..\Components\services\saddr\" -I "C:\Texas
+#        Instruments\Z-Stack 3.0.2\Projects\zstack\HomeAutomation\Working
+#        v1.2\CC2530DB\..\..\..\..\..\Components\services\sdata\" -I "C:\Texas
+#        Instruments\Z-Stack 3.0.2\Projects\zstack\HomeAutomation\Working
+#        v1.2\CC2530DB\..\..\..\..\..\Components\stack\af\" -I "C:\Texas
+#        Instruments\Z-Stack 3.0.2\Projects\zstack\HomeAutomation\Working
+#        v1.2\CC2530DB\..\..\..\..\..\Components\stack\bdb\" -I "C:\Texas
+#        Instruments\Z-Stack 3.0.2\Projects\zstack\HomeAutomation\Working
+#        v1.2\CC2530DB\..\..\..\..\..\Components\stack\nwk\" -I "C:\Texas
+#        Instruments\Z-Stack 3.0.2\Projects\zstack\HomeAutomation\Working
+#        v1.2\CC2530DB\..\..\..\..\..\Components\stack\bdb\" -I "C:\Texas
+#        Instruments\Z-Stack 3.0.2\Projects\zstack\HomeAutomation\Working
+#        v1.2\CC2530DB\..\..\..\..\..\Components\stack\gp\" -I "C:\Texas
+#        Instruments\Z-Stack 3.0.2\Projects\zstack\HomeAutomation\Working
+#        v1.2\CC2530DB\..\..\..\..\..\Components\stack\sapi\" -I "C:\Texas
+#        Instruments\Z-Stack 3.0.2\Projects\zstack\HomeAutomation\Working
+#        v1.2\CC2530DB\..\..\..\..\..\Components\stack\sec\" -I "C:\Texas
+#        Instruments\Z-Stack 3.0.2\Projects\zstack\HomeAutomation\Working
+#        v1.2\CC2530DB\..\..\..\..\..\Components\stack\sys\" -I "C:\Texas
+#        Instruments\Z-Stack 3.0.2\Projects\zstack\HomeAutomation\Working
+#        v1.2\CC2530DB\..\..\..\..\..\Components\stack\zcl\" -I "C:\Texas
+#        Instruments\Z-Stack 3.0.2\Projects\zstack\HomeAutomation\Working
+#        v1.2\CC2530DB\..\..\..\..\..\Components\stack\zdo\" -I "C:\Texas
+#        Instruments\Z-Stack 3.0.2\Projects\zstack\HomeAutomation\Working
+#        v1.2\CC2530DB\..\..\..\..\..\Components\zmac\" -I "C:\Texas
+#        Instruments\Z-Stack 3.0.2\Projects\zstack\HomeAutomation\Working
+#        v1.2\CC2530DB\..\..\..\..\..\Components\zmac\f8w\" -Ohz
+#        --require_prototypes)
+#    Locale             =  Russian_RUS.1251
+#    List file          =  
+#        C:\Texas Instruments\Z-Stack
+#        3.0.2\Projects\zstack\HomeAutomation\Working
+#        v1.2\CC2530DB\RouterEB\List\zcl_orvibo_data.lst
+#    Object file        =  
+#        C:\Texas Instruments\Z-Stack
+#        3.0.2\Projects\zstack\HomeAutomation\Working
+#        v1.2\CC2530DB\RouterEB\Obj\zcl_orvibo_data.r51
+#
+###############################################################################
+
+C:\Texas Instruments\Z-Stack 3.0.2\Projects\zstack\HomeAutomation\Working v1.2\Source\zcl_orvibo_data.c
+      1          /**************************************************************************************************
+      2            Filename:       zcl_orvibo_data.c
+      3            Revised:        $Date: 2014-05-12 13:14:02 -0700 (Mon, 12 May 2014) $
+      4            Revision:       $Revision: 38502 $
+      5          
+      6          
+      7            Description:    Zigbee Cluster Library - sample device application.
+      8          
+      9          
+     10            Copyright 2006-2014 Texas Instruments Incorporated. All rights reserved.
+     11          
+     12            IMPORTANT: Your use of this Software is limited to those specific rights
+     13            granted under the terms of a software license agreement between the user
+     14            who downloaded the software, his/her employer (which must be your employer)
+     15            and Texas Instruments Incorporated (the "License").  You may not use this
+     16            Software unless you agree to abide by the terms of the License. The License
+     17            limits your use, and you acknowledge, that the Software may not be modified,
+     18            copied or distributed unless embedded on a Texas Instruments microcontroller
+     19            or used solely and exclusively in conjunction with a Texas Instruments radio
+     20            frequency transceiver, which is integrated into your product.  Other than for
+     21            the foregoing purpose, you may not use, reproduce, copy, prepare derivative
+     22            works of, modify, distribute, perform, display or sell this Software and/or
+     23            its documentation for any purpose.
+     24          
+     25            YOU FURTHER ACKNOWLEDGE AND AGREE THAT THE SOFTWARE AND DOCUMENTATION ARE
+     26            PROVIDED "AS IS" WITHOUT WARRANTY OF ANY KIND, EITHER EXPRESS OR IMPLIED,
+     27            INCLUDING WITHOUT LIMITATION, ANY WARRANTY OF MERCHANTABILITY, TITLE,
+     28            NON-INFRINGEMENT AND FITNESS FOR A PARTICULAR PURPOSE. IN NO EVENT SHALL
+     29            TEXAS INSTRUMENTS OR ITS LICENSORS BE LIABLE OR OBLIGATED UNDER CONTRACT,
+     30            NEGLIGENCE, STRICT LIABILITY, CONTRIBUTION, BREACH OF WARRANTY, OR OTHER
+     31            LEGAL EQUITABLE THEORY ANY DIRECT OR INDIRECT DAMAGES OR EXPENSES
+     32            INCLUDING BUT NOT LIMITED TO ANY INCIDENTAL, SPECIAL, INDIRECT, PUNITIVE
+     33            OR CONSEQUENTIAL DAMAGES, LOST PROFITS OR LOST DATA, COST OF PROCUREMENT
+     34            OF SUBSTITUTE GOODS, TECHNOLOGY, SERVICES, OR ANY CLAIMS BY THIRD PARTIES
+     35            (INCLUDING BUT NOT LIMITED TO ANY DEFENSE THEREOF), OR OTHER SIMILAR COSTS.
+     36          
+     37            Should you have any questions regarding your right to use this Software,
+     38            contact Texas Instruments Incorporated at www.TI.com.
+     39          **************************************************************************************************/
+     40          
+     41          /*********************************************************************
+     42           * INCLUDES
+     43           */
+     44          #include "ZComDef.h"
+     45          #include "OSAL.h"
+     46          #include "AF.h"
+     47          #include "ZDConfig.h"
+     48          
+     49          #include "zcl.h"
+     50          #include "zcl_general.h"
+     51          #include "zcl_ha.h"
+     52          
+     53          /* ORVIBO_TODO: Include any of the header files below to access specific cluster data
+     54          #include "zcl_poll_control.h"
+     55          #include "zcl_electrical_measurement.h"
+     56          #include "zcl_diagnostic.h"
+     57          #include "zcl_meter_identification.h"
+     58          #include "zcl_appliance_identification.h"
+     59          #include "zcl_appliance_events_alerts.h"
+     60          #include "zcl_power_profile.h"
+     61          #include "zcl_appliance_control.h"
+     62          #include "zcl_appliance_statistics.h"
+     63          #include "zcl_hvac.h"
+     64          */
+     65          
+     66          #include "zcl_orvibo.h"
+     67          
+     68          /*********************************************************************
+     69           * CONSTANTS
+     70           */
+     71          
+     72          #define ORVIBO_DEVICE_VERSION     1
+     73          #define ORVIBO_FLAGS              0
+     74          
+     75          #define ORVIBO_HWVERSION          1
+     76          #define ORVIBO_ZCLVERSION         1
+     77          
+     78          /*********************************************************************
+     79           * TYPEDEFS
+     80           */
+     81          
+     82          /*********************************************************************
+     83           * MACROS
+     84           */
+     85          
+     86          /*********************************************************************
+     87           * GLOBAL VARIABLES
+     88           */
+     89          
+     90          // Global attributes
+
+   \                                 In  segment XDATA_ROM_C, align 1
+     91          const uint16 zclOrvibo_clusterRevision_all = 0x0001; 
+   \                     zclOrvibo_clusterRevision_all:
+   \   000000   0100         DW 1
+     92          
+     93          // Basic Cluster
+
+   \                                 In  segment XDATA_ROM_C, align 1
+     94          const uint8 zclOrvibo_HWRevision = ORVIBO_HWVERSION;
+   \                     zclOrvibo_HWRevision:
+   \   000000   01           DB 1
+
+   \                                 In  segment XDATA_ROM_C, align 1
+     95          const uint8 zclOrvibo_ZCLVersion = ORVIBO_ZCLVERSION;
+   \                     zclOrvibo_ZCLVersion:
+   \   000000   01           DB 1
+
+   \                                 In  segment XDATA_ROM_C, align 1
+     96          const uint8 zclOrvibo_ManufacturerName[] = { 6, 'O','r','v','i','b','o' };
+   \                     zclOrvibo_ManufacturerName:
+   \   000000   06           DB 6
+   \   000001   4F           DB 79
+   \   000002   72           DB 114
+   \   000003   76           DB 118
+   \   000004   69           DB 105
+   \   000005   62           DB 98
+   \   000006   6F           DB 111
+
+   \                                 In  segment XDATA_ROM_C, align 1
+     97          const uint8 zclOrvibo_ModelId[] = { 32, '1','a','2','0','6','2','8','5','0','4','b','f','4','8','c','8','8','e','d','6','9','8','f','e','9','6','b','7','8','6','7','c' };
+   \                     zclOrvibo_ModelId:
+   \   000000   20           DB 32
+   \   000001   31           DB 49
+   \   000002   61           DB 97
+   \   000003   32           DB 50
+   \   000004   30           DB 48
+   \   000005   36           DB 54
+   \   000006   32           DB 50
+   \   000007   38           DB 56
+   \   000008   35           DB 53
+   \   000009   30           DB 48
+   \   00000A   34           DB 52
+   \   00000B   62           DB 98
+   \   00000C   66           DB 102
+   \   00000D   34           DB 52
+   \   00000E   38           DB 56
+   \   00000F   63           DB 99
+   \   000010   38           DB 56
+   \   000011   38           DB 56
+   \   000012   65           DB 101
+   \   000013   64           DB 100
+   \   000014   36           DB 54
+   \   000015   39           DB 57
+   \   000016   38           DB 56
+   \   000017   66           DB 102
+   \   000018   65           DB 101
+   \   000019   39           DB 57
+   \   00001A   36           DB 54
+   \   00001B   62           DB 98
+   \   00001C   37           DB 55
+   \   00001D   38           DB 56
+   \   00001E   36           DB 54
+   \   00001F   37           DB 55
+   \   000020   63           DB 99
+
+   \                                 In  segment XDATA_ROM_C, align 1
+     98          const uint8 zclOrvibo_DateCode[] = { 8, '2','0','2','2','0','8','1','2' };
+   \                     zclOrvibo_DateCode:
+   \   000000   08           DB 8
+   \   000001   32           DB 50
+   \   000002   30           DB 48
+   \   000003   32           DB 50
+   \   000004   32           DB 50
+   \   000005   30           DB 48
+   \   000006   38           DB 56
+   \   000007   31           DB 49
+   \   000008   32           DB 50
+
+   \                                 In  segment XDATA_ROM_C, align 1
+     99          const uint8 zclOrvibo_PowerSource = POWER_SOURCE_MAINS_1_PHASE;
+   \                     zclOrvibo_PowerSource:
+   \   000000   01           DB 1
+    100          
+
+   \                                 In  segment XDATA_I, align 1, keep-with-next
+    101          uint8 zclOrvibo_LocationDescription[17] = { 16, ' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ' };
+   \                     zclOrvibo_LocationDescription:
+   \   000000                DS 17
+   \   000011                REQUIRE `?<Initializer for zclOrvibo_LocationDescriptio`
+   \   000011                REQUIRE __INIT_XDATA_I
+
+   \                                 In  segment XDATA_Z, align 1, keep-with-next
+    102          uint8 zclOrvibo_PhysicalEnvironment = 0;
+   \                     zclOrvibo_PhysicalEnvironment:
+   \   000000                DS 1
+   \   000001                REQUIRE __INIT_XDATA_Z
+
+   \                                 In  segment XDATA_I, align 1, keep-with-next
+    103          uint8 zclOrvibo_DeviceEnable = DEVICE_ENABLED;
+   \                     zclOrvibo_DeviceEnable:
+   \   000000                DS 1
+   \   000001                REQUIRE `?<Initializer for zclOrvibo_DeviceEnable>`
+   \   000001                REQUIRE __INIT_XDATA_I
+    104          
+    105          // Identify Cluster
+
+   \                                 In  segment XDATA_Z, align 1, keep-with-next
+    106          uint16 zclOrvibo_IdentifyTime;
+   \                     zclOrvibo_IdentifyTime:
+   \   000000                DS 2
+   \   000002                REQUIRE __INIT_XDATA_Z
+    107          extern uint8 RELAY_STATE;
+    108          
+    109          /* ORVIBO_TODO: declare attribute variables here. If its value can change,
+    110           * initialize it in zclOrvibo_ResetAttributesToDefaultValues. If its
+    111           * value will not change, initialize it here.
+    112           */
+    113          
+    114          #if ZCL_DISCOVER
+    115          CONST zclCommandRec_t zclOrvibo_Cmds[] =
+    116          {
+    117            {
+    118              ZCL_CLUSTER_ID_GEN_BASIC,
+    119              COMMAND_BASIC_RESET_FACT_DEFAULT,
+    120              CMD_DIR_SERVER_RECEIVED
+    121            },
+    122            {
+    123              ZCL_CLUSTER_ID_GEN_ON_OFF,
+    124              COMMAND_OFF,
+    125              CMD_DIR_SERVER_RECEIVED
+    126            },
+    127            {
+    128              ZCL_CLUSTER_ID_GEN_ON_OFF,
+    129              COMMAND_ON,
+    130              CMD_DIR_SERVER_RECEIVED
+    131            },
+    132            {
+    133              ZCL_CLUSTER_ID_GEN_ON_OFF,
+    134              COMMAND_TOGGLE,
+    135              CMD_DIR_SERVER_RECEIVED
+    136            },
+    137          };
+    138          
+    139          CONST uint8 zclCmdsArraySize = ( sizeof(zclOrvibo_Cmds) / sizeof(zclOrvibo_Cmds[0]) );
+    140          #endif // ZCL_DISCOVER
+    141          
+    142          /*********************************************************************
+    143           * ATTRIBUTE DEFINITIONS - Uses REAL cluster IDs
+    144           */
+
+   \                                 In  segment CODE_C, align 1
+    145          CONST zclAttrRec_t zclOrvibo_Attrs[] =
+   \                     zclOrvibo_Attrs:
+   \   000000   0000         DW 0
+   \   000002   0300         DW 3
+   \   000004   20           DB 32
+   \   000005   01           DB 1
+   \   000006   ....         DW zclOrvibo_HWRevision
+   \   000008   0000         DW 0
+   \   00000A   0000         DW 0
+   \   00000C   20           DB 32
+   \   00000D   01           DB 1
+   \   00000E   ....         DW zclOrvibo_ZCLVersion
+   \   000010   0000         DW 0
+   \   000012   0400         DW 4
+   \   000014   42           DB 66
+   \   000015   01           DB 1
+   \   000016   ....         DW zclOrvibo_ManufacturerName
+   \   000018   0000         DW 0
+   \   00001A   0500         DW 5
+   \   00001C   42           DB 66
+   \   00001D   01           DB 1
+   \   00001E   ....         DW zclOrvibo_ModelId
+   \   000020   0000         DW 0
+   \   000022   0600         DW 6
+   \   000024   42           DB 66
+   \   000025   01           DB 1
+   \   000026   ....         DW zclOrvibo_DateCode
+   \   000028   0000         DW 0
+   \   00002A   0700         DW 7
+   \   00002C   30           DB 48
+   \   00002D   01           DB 1
+   \   00002E   ....         DW zclOrvibo_PowerSource
+   \   000030   0000         DW 0
+   \   000032   1000         DW 16
+   \   000034   42           DB 66
+   \   000035   03           DB 3
+   \   000036   ....         DW zclOrvibo_LocationDescription
+   \   000038   0000         DW 0
+   \   00003A   1100         DW 17
+   \   00003C   30           DB 48
+   \   00003D   03           DB 3
+   \   00003E   ....         DW zclOrvibo_PhysicalEnvironment
+   \   000040   0000         DW 0
+   \   000042   1200         DW 18
+   \   000044   10           DB 16
+   \   000045   03           DB 3
+   \   000046   ....         DW zclOrvibo_DeviceEnable
+   \   000048   0300         DW 3
+   \   00004A   0000         DW 0
+   \   00004C   21           DB 33
+   \   00004D   03           DB 3
+   \   00004E   ....         DW zclOrvibo_IdentifyTime
+   \   000050   0000         DW 0
+   \   000052   FDFF         DW 65533
+   \   000054   21           DB 33
+   \   000055   01           DB 1
+   \   000056   ....         DW zclOrvibo_clusterRevision_all
+   \   000058   0300         DW 3
+   \   00005A   FDFF         DW 65533
+   \   00005C   21           DB 33
+   \   00005D   01           DB 1
+   \   00005E   ....         DW zclOrvibo_clusterRevision_all
+   \   000060   0600         DW 6
+   \   000062   0000         DW 0
+   \   000064   10           DB 16
+   \   000065   01           DB 1
+   \   000066   ....         DW RELAY_STATE
+   \   000068   0600         DW 6
+   \   00006A   FDFF         DW 65533
+   \   00006C   21           DB 33
+   \   00006D   81           DB 129
+   \   00006E   ....         DW zclOrvibo_clusterRevision_all
+    146          {
+    147            // *** General Basic Cluster Attributes ***
+    148            {
+    149              ZCL_CLUSTER_ID_GEN_BASIC,             // Cluster IDs - defined in the foundation (ie. zcl.h)
+    150              {  // Attribute record
+    151                ATTRID_BASIC_HW_VERSION,            // Attribute ID - Found in Cluster Library header (ie. zcl_general.h)
+    152                ZCL_DATATYPE_UINT8,                 // Data Type - found in zcl.h
+    153                ACCESS_CONTROL_READ,                // Variable access control - found in zcl.h
+    154                (void *)&zclOrvibo_HWRevision  // Pointer to attribute variable
+    155              }
+    156            },
+    157            {
+    158              ZCL_CLUSTER_ID_GEN_BASIC,
+    159              { // Attribute record
+    160                ATTRID_BASIC_ZCL_VERSION,
+    161                ZCL_DATATYPE_UINT8,
+    162                ACCESS_CONTROL_READ,
+    163                (void *)&zclOrvibo_ZCLVersion
+    164              }
+    165            },
+    166            {
+    167              ZCL_CLUSTER_ID_GEN_BASIC,
+    168              { // Attribute record
+    169                ATTRID_BASIC_MANUFACTURER_NAME,
+    170                ZCL_DATATYPE_CHAR_STR,
+    171                ACCESS_CONTROL_READ,
+    172                (void *)zclOrvibo_ManufacturerName
+    173              }
+    174            },
+    175            {
+    176              ZCL_CLUSTER_ID_GEN_BASIC,
+    177              { // Attribute record
+    178                ATTRID_BASIC_MODEL_ID,
+    179                ZCL_DATATYPE_CHAR_STR,
+    180                ACCESS_CONTROL_READ,
+    181                (void *)zclOrvibo_ModelId
+    182              }
+    183            },
+    184            {
+    185              ZCL_CLUSTER_ID_GEN_BASIC,
+    186              { // Attribute record
+    187                ATTRID_BASIC_DATE_CODE,
+    188                ZCL_DATATYPE_CHAR_STR,
+    189                ACCESS_CONTROL_READ,
+    190                (void *)zclOrvibo_DateCode
+    191              }
+    192            },
+    193            {
+    194              ZCL_CLUSTER_ID_GEN_BASIC,
+    195              { // Attribute record
+    196                ATTRID_BASIC_POWER_SOURCE,
+    197                ZCL_DATATYPE_ENUM8,
+    198                ACCESS_CONTROL_READ,
+    199                (void *)&zclOrvibo_PowerSource
+    200              }
+    201            },
+    202            {
+    203              ZCL_CLUSTER_ID_GEN_BASIC,
+    204              { // Attribute record
+    205                ATTRID_BASIC_LOCATION_DESC,
+    206                ZCL_DATATYPE_CHAR_STR,
+    207                (ACCESS_CONTROL_READ | ACCESS_CONTROL_WRITE),
+    208                (void *)zclOrvibo_LocationDescription
+    209              }
+    210            },
+    211            {
+    212              ZCL_CLUSTER_ID_GEN_BASIC,
+    213              { // Attribute record
+    214                ATTRID_BASIC_PHYSICAL_ENV,
+    215                ZCL_DATATYPE_ENUM8,
+    216                (ACCESS_CONTROL_READ | ACCESS_CONTROL_WRITE),
+    217                (void *)&zclOrvibo_PhysicalEnvironment
+    218              }
+    219            },
+    220            {
+    221              ZCL_CLUSTER_ID_GEN_BASIC,
+    222              { // Attribute record
+    223                ATTRID_BASIC_DEVICE_ENABLED,
+    224                ZCL_DATATYPE_BOOLEAN,
+    225                (ACCESS_CONTROL_READ | ACCESS_CONTROL_WRITE),
+    226                (void *)&zclOrvibo_DeviceEnable
+    227              }
+    228            },
+    229          
+    230          #ifdef ZCL_IDENTIFY
+    231            // *** Identify Cluster Attribute ***
+    232            {
+    233              ZCL_CLUSTER_ID_GEN_IDENTIFY,
+    234              { // Attribute record
+    235                ATTRID_IDENTIFY_TIME,
+    236                ZCL_DATATYPE_UINT16,
+    237                (ACCESS_CONTROL_READ | ACCESS_CONTROL_WRITE),
+    238                (void *)&zclOrvibo_IdentifyTime
+    239              }
+    240            },
+    241          #endif
+    242            {
+    243              ZCL_CLUSTER_ID_GEN_BASIC,
+    244              {  // Attribute record
+    245                ATTRID_CLUSTER_REVISION,
+    246                ZCL_DATATYPE_UINT16,
+    247                ACCESS_CONTROL_READ,
+    248                (void *)&zclOrvibo_clusterRevision_all
+    249              }
+    250            },
+    251            {
+    252              ZCL_CLUSTER_ID_GEN_IDENTIFY,
+    253              {  // Attribute record
+    254                ATTRID_CLUSTER_REVISION,
+    255                ZCL_DATATYPE_UINT16,
+    256                ACCESS_CONTROL_READ,
+    257                (void *)&zclOrvibo_clusterRevision_all
+    258              }
+    259            },
+    260              {
+    261              ZCL_CLUSTER_ID_GEN_ON_OFF,
+    262              {
+    263                ATTRID_ON_OFF,
+    264                ZCL_DATATYPE_BOOLEAN,
+    265                ACCESS_CONTROL_READ,
+    266                (void *)&RELAY_STATE
+    267              }
+    268            },
+    269            {
+    270              ZCL_CLUSTER_ID_GEN_ON_OFF,
+    271              {
+    272                ATTRID_CLUSTER_REVISION,
+    273                ZCL_DATATYPE_UINT16,
+    274                ACCESS_CONTROL_READ | ACCESS_CLIENT,
+    275                (void *)&zclOrvibo_clusterRevision_all
+    276              }
+    277            },
+    278          };
+    279          
+
+   \                                 In  segment CODE_C, align 1
+    280          uint8 CONST zclOrvibo_NumAttributes = ( sizeof(zclOrvibo_Attrs) / sizeof(zclOrvibo_Attrs[0]) );
+   \                     zclOrvibo_NumAttributes:
+   \   000000   0E           DB 14
+    281          
+    282          /*********************************************************************
+    283           * SIMPLE DESCRIPTOR
+    284           */
+    285          // This is the Cluster ID List and should be filled with Application
+    286          // specific cluster IDs.
+
+   \                                 In  segment XDATA_ROM_C, align 1
+    287          const cId_t zclOrvibo_InClusterList[] =
+   \                     zclOrvibo_InClusterList:
+   \   000000   0000         DW 0
+   \   000002   0300         DW 3
+   \   000004   0600         DW 6
+    288          {
+    289            ZCL_CLUSTER_ID_GEN_BASIC,
+    290            ZCL_CLUSTER_ID_GEN_IDENTIFY,
+    291            ZCL_CLUSTER_ID_GEN_ON_OFF,
+    292            
+    293            // ORVIBO_TODO: Add application specific Input Clusters Here. 
+    294            //       See zcl.h for Cluster ID definitions
+    295            
+    296          };
+    297          #define ZCLORVIBO_MAX_INCLUSTERS   (sizeof(zclOrvibo_InClusterList) / sizeof(zclOrvibo_InClusterList[0]))
+    298          
+    299          
+
+   \                                 In  segment XDATA_ROM_C, align 1
+    300          const cId_t zclOrvibo_OutClusterList[] =
+   \                     zclOrvibo_OutClusterList:
+   \   000000   0000         DW 0
+    301          {
+    302            ZCL_CLUSTER_ID_GEN_BASIC,
+    303            
+    304            // ORVIBO_TODO: Add application specific Output Clusters Here. 
+    305            //       See zcl.h for Cluster ID definitions
+    306          };
+    307          #define ZCLORVIBO_MAX_OUTCLUSTERS  (sizeof(zclOrvibo_OutClusterList) / sizeof(zclOrvibo_OutClusterList[0]))
+    308          
+    309          
+
+   \                                 In  segment XDATA_I, align 1, keep-with-next
+    310          SimpleDescriptionFormat_t zclOrvibo_SimpleDesc =
+   \                     zclOrvibo_SimpleDesc:
+   \   000000                DS 12
+   \   00000C                REQUIRE `?<Initializer for zclOrvibo_SimpleDesc>`
+   \   00000C                REQUIRE __INIT_XDATA_I
+    311          {
+    312            ORVIBO_ENDPOINT,                  //  int Endpoint;
+    313            ZCL_HA_PROFILE_ID,                     //  uint16 AppProfId;
+    314            // ORVIBO_TODO: Replace ZCL_HA_DEVICEID_ON_OFF_LIGHT with application specific device ID
+    315            ZCL_HA_DEVICEID_ON_OFF_LIGHT,          //  uint16 AppDeviceId; 
+    316            ORVIBO_DEVICE_VERSION,            //  int   AppDevVer:4;
+    317            ORVIBO_FLAGS,                     //  int   AppFlags:4;
+    318            ZCLORVIBO_MAX_INCLUSTERS,         //  byte  AppNumInClusters;
+    319            (cId_t *)zclOrvibo_InClusterList, //  byte *pAppInClusterList;
+    320            ZCLORVIBO_MAX_OUTCLUSTERS,        //  byte  AppNumInClusters;
+    321            (cId_t *)zclOrvibo_OutClusterList //  byte *pAppInClusterList;
+    322          };
+    323          
+    324          // Added to include ZLL Target functionality
+    325          #if defined ( BDB_TL_INITIATOR ) || defined ( BDB_TL_TARGET )
+    326          bdbTLDeviceInfo_t tlOrvibo_DeviceInfo =
+    327          {
+    328            ORVIBO_ENDPOINT,                  //uint8 endpoint;
+    329            ZCL_HA_PROFILE_ID,                        //uint16 profileID;
+    330            // ORVIBO_TODO: Replace ZCL_HA_DEVICEID_ON_OFF_LIGHT with application specific device ID
+    331            ZCL_HA_DEVICEID_ON_OFF_LIGHT,          //uint16 deviceID;
+    332            ORVIBO_DEVICE_VERSION,                    //uint8 version;
+    333            ORVIBO_NUM_GRPS                   //uint8 grpIdCnt;
+    334          };
+    335          #endif
+    336          
+    337          /*********************************************************************
+    338           * GLOBAL FUNCTIONS
+    339           */
+    340          
+    341          /*********************************************************************
+    342           * LOCAL FUNCTIONS
+    343           */
+    344            
+
+   \                                 In  segment BANKED_CODE, align 1, keep-with-next
+    345          void zclOrvibo_ResetAttributesToDefaultValues(void)
+   \                     zclOrvibo_ResetAttributesToDefaultValues:
+    346          {
+   \   000000   C082         PUSH      DPL
+   \   000002   C083         PUSH      DPH
+   \   000004                ; Saved register size: 2
+   \   000004                ; Auto size: 0
+    347            int i;
+    348            
+    349            zclOrvibo_LocationDescription[0] = 16;
+   \   000004   90....       MOV       DPTR,#zclOrvibo_LocationDescription
+   \   000007   7410         MOV       A,#0x10
+   \   000009   F0           MOVX      @DPTR,A
+    350            for (i = 1; i <= 16; i++)
+    351            {
+    352              zclOrvibo_LocationDescription[i] = ' ';
+   \   00000A   7420         MOV       A,#0x20
+   \   00000C   A3           INC       DPTR
+   \   00000D   7810         MOV       R0,#0x10
+   \                     ??zclOrvibo_ResetAttributesToDefaultValues_0:
+   \   00000F   F0           MOVX      @DPTR,A
+   \   000010   A3           INC       DPTR
+   \   000011   D8FC         DJNZ      R0,??zclOrvibo_ResetAttributesToDefaultValues_0
+    353            }
+    354            
+    355            zclOrvibo_PhysicalEnvironment = PHY_UNSPECIFIED_ENV;
+   \   000013   90....       MOV       DPTR,#zclOrvibo_PhysicalEnvironment
+   \   000016   E4           CLR       A
+   \   000017   F0           MOVX      @DPTR,A
+    356            zclOrvibo_DeviceEnable = DEVICE_ENABLED;
+   \   000018   90....       MOV       DPTR,#zclOrvibo_DeviceEnable
+   \   00001B   04           INC       A
+   \   00001C   F0           MOVX      @DPTR,A
+    357            
+    358          #ifdef ZCL_IDENTIFY
+    359            zclOrvibo_IdentifyTime = 0;
+   \   00001D   90....       MOV       DPTR,#zclOrvibo_IdentifyTime
+   \   000020   E4           CLR       A
+   \   000021   F0           MOVX      @DPTR,A
+   \   000022   A3           INC       DPTR
+   \   000023   F0           MOVX      @DPTR,A
+    360          #endif
+    361            
+    362            /* ORVIBO_TODO: initialize cluster attribute variables. */
+    363          }
+   \   000024   D083         POP       DPH
+   \   000026   D082         POP       DPL
+   \   000028   02....       LJMP      ?BRET
+
+   \                                 In  segment XDATA_ID, align 1, keep-with-next
+   \                     `?<Initializer for zclOrvibo_LocationDescriptio`:
+   \   000000   10           DB 16
+   \   000001   20           DB 32
+   \   000002   20           DB 32
+   \   000003   20           DB 32
+   \   000004   20           DB 32
+   \   000005   20           DB 32
+   \   000006   20           DB 32
+   \   000007   20           DB 32
+   \   000008   20           DB 32
+   \   000009   20           DB 32
+   \   00000A   20           DB 32
+   \   00000B   20           DB 32
+   \   00000C   20           DB 32
+   \   00000D   20           DB 32
+   \   00000E   20           DB 32
+   \   00000F   20           DB 32
+   \   000010   20           DB 32
+
+   \                                 In  segment XDATA_ID, align 1, keep-with-next
+   \                     `?<Initializer for zclOrvibo_DeviceEnable>`:
+   \   000000   01           DB 1
+
+   \                                 In  segment XDATA_ID, align 1, keep-with-next
+   \                     `?<Initializer for zclOrvibo_SimpleDesc>`:
+   \   000000   01           DB 1
+   \   000001   0401         DW 260
+   \   000003   0001         DW 256
+   \   000005   01           DB 1
+   \   000006   03           DB 3
+   \   000007   ....         DW zclOrvibo_InClusterList
+   \   000009   01           DB 1
+   \   00000A   ....         DW zclOrvibo_OutClusterList
+    364          
+    365          /****************************************************************************
+    366          ****************************************************************************/
+    367          
+    368          
+
+   Maximum stack usage in bytes:
+
+   ISTACK Function
+   ------ --------
+      2   zclOrvibo_ResetAttributesToDefaultValues
+
+
+   Segment part sizes:
+
+   Bytes  Function/Label
+   -----  --------------
+       1  ?<Initializer for zclOrvibo_DeviceEnable>
+      17  ?<Initializer for zclOrvibo_LocationDescriptio
+      12  ?<Initializer for zclOrvibo_SimpleDesc>
+     112  zclOrvibo_Attrs
+       9  zclOrvibo_DateCode
+       1  zclOrvibo_DeviceEnable
+       1  zclOrvibo_HWRevision
+       2  zclOrvibo_IdentifyTime
+       6  zclOrvibo_InClusterList
+      17  zclOrvibo_LocationDescription
+       7  zclOrvibo_ManufacturerName
+      33  zclOrvibo_ModelId
+       1  zclOrvibo_NumAttributes
+       2  zclOrvibo_OutClusterList
+       1  zclOrvibo_PhysicalEnvironment
+       1  zclOrvibo_PowerSource
+      43  zclOrvibo_ResetAttributesToDefaultValues
+      12  zclOrvibo_SimpleDesc
+       1  zclOrvibo_ZCLVersion
+       2  zclOrvibo_clusterRevision_all
+       6  -- Other
+
+ 
+  43 bytes in segment BANKED_CODE
+   6 bytes in segment BANK_RELAYS
+ 113 bytes in segment CODE_C
+  30 bytes in segment XDATA_I
+  30 bytes in segment XDATA_ID
+  62 bytes in segment XDATA_ROM_C
+   3 bytes in segment XDATA_Z
+ 
+ 149 bytes of CODE     memory
+  62 bytes of CONST    memory
+  43 bytes of HUGECODE memory
+  33 bytes of XDATA    memory
+
+Errors: none
+Warnings: none
